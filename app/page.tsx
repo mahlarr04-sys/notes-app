@@ -61,16 +61,14 @@ export default function Home() {
             "bg-blue-200",
             "bg-purple-200",
         ];
-
         const randomColor =
             colors[Math.floor(Math.random() * colors.length)];
-
-        //
+        const date = new Date().toLocaleDateString("fa-IR");
         const newNote = {
             // id: Date.now(),
             title: "عنوان",
             content: "متن جدید",
-            date: "۱۴۰۵/۰۱/۱۰",
+            date: new Date().toLocaleDateString("fa-IR"),
             color: randomColor,
         };
         try {

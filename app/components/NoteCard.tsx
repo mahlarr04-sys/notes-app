@@ -168,6 +168,7 @@ export default function NoteCard({
                 </div>
 
             )}
+            
             {/* دکمه ذخیره */}
             {editingNote === note.id && (
                 <button
