@@ -10,16 +10,12 @@ import NoteCard from "@/app/components/NoteCard";
 
 // برای اینکه صفحه رندر بشه
 export default function Home() {
-    //منو اول بسته ست
     const [menuOpen, setMenuOpen] = useState(false)
-    //نوت ها رو از بک اند میگیره/ همه نوت ها اینجا ذخیره میشن
     const [notes, setNotes] = useState<Note[]>([])
-    //اول صفحه در حال لود
     const [loading, setLoading] = useState(true);
     const [search, setSearch] = useState("");
     const [editText, setEditText] = useState("");
     const [editingNote, setEditingNote] = useState<number | null>(null);
-    //ادیت متن اصلی
     const [editContent, setEditContent] = useState("");
     const BASE_URL = "http://127.0.0.1:8000";
     const [editDate, setEditDate] = useState("");
@@ -42,7 +38,6 @@ export default function Home() {
     border border-white/20
     `;
     //بک اند/دیتا میگیره2
-    //ui اپدیت میشه
     useEffect(() => {
         const fetchData = async () => {
             try {
